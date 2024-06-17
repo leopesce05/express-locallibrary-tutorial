@@ -40,7 +40,7 @@ const mongoose = require('mongoose');
 mongoose.set("strictQuery", false);
 
 
-const mongodb  = process.env.MONGODB_URI || 'mongodb+srv://libAPP:library@library.gt5eeu2.mongodb.net/?retryWrites=true&w=majority&appName=Library'
+const mongodb  = process.env.MONGODB_URI
 
 //DATABASE CONNECTION
 main().catch(err => console.log(err));
