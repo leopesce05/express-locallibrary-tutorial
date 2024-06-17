@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const compression = require("compression");
 const helmet = require("helmet");
-const compression = require("compression");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -32,8 +31,6 @@ const limiter = RateLimit({
 });
 // Apply rate limiter to all requests
 app.use(limiter);
-
-app.use(compression()); // Compress all routes
 
 //DATABASE SETUP
 const mongoose = require('mongoose');
